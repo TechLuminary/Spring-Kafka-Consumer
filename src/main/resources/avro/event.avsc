@@ -1,0 +1,10 @@
+{
+"type":"record",
+"name": "Event",
+"namespace":"com.techluminary.spring",
+"fields": [
+{"name": "firstName", "type": "String"},
+{"name": "lastName", "type": "String"}
+]
+
+}

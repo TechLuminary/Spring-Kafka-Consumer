@@ -1,0 +1,29 @@
+---
+spring:
+  application:
+    name: spring-kafka-consumer
+  profiles: dev
+  kafka:
+    properties:
+      schema.registry.url: 
+      security.protocol: SASL_PLAINTEXT
+      sasl.kerberos.service.name:
+      request.timeout.ms:
+    consumer:
+      bootstrap-servers: localhost:9094
+      group-id: testgroup
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      
+kafkaConsumerProps:
+  jaasFileDirectory:
+  keytabFileLocation: 
+  securityKrb5Realm:
+  securityKrb5Kdc:
+  securityKrb5Debug: true
+  serviceId: Principal
+  consumerGroup: testgroup
+  
+topic: kafkaTopic
